@@ -1,0 +1,232 @@
+.item-detail {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1380px;
+    gap: 30px;
+    margin: 0 auto 150px;
+}
+
+.item-detail__image {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 50px;
+    margin-top: 120px;
+}
+
+
+.item-detail__name {
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+.item-detail__brand {
+    font-size: 20px;
+    margin-top: -30px;
+}
+
+.item-detail__price {
+    display: flex;
+    align-items: baseline;
+}
+
+.item-detail__price .yen,
+.item-detail__price .tax {
+    font-size: 30px;
+}
+
+.item-detail__price .amount {
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+.icon-group {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.favorite-button,
+.comment-link,
+.comment-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    min-height: 70px;
+}
+
+.favorite-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    stroke: rgb(118, 116, 118);
+    fill: none;
+    cursor: pointer;
+}
+
+.favorite-icon.liked {
+    stroke: rgb(254, 229, 90);
+    fill: rgb(254, 229, 90);
+}
+
+.comment-img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.favorite-count, .comment-count {
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.purchase-button {
+    width: 570px;
+    height: 56px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    background: #FF5555;
+    color: #FFFFFF;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 56px;
+}
+
+.item-detail__heading {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.item-detail__detail {
+    font-size: 24px;
+}
+
+.item-detail__category, .item-detail__condition {
+    font-size: 24px;
+}
+
+.category-label, .condition-label {
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.tag {
+    display: inline-block;
+    width: 102px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.condition-value {
+    font-size: 20px;
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #5F5F5F;
+}
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.comment-user-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.comment-user-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.comment-content {
+    width: 570px;
+    height: 70px;
+    padding-left: 15px;
+    background-color: #E5E5E5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+.comment-label {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+}
+
+.comment-button {
+    width: 570px;
+    height: 56px;
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    background: #FF5555;
+    color: #FFFFFF;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 56px;
+    border: none;
+    margin-top: 40px;
+}
+
+.sold-label {
+    font-size: 30px;
+    color: #5F5F5F;
+    font-weight: bold;
+}
+
+.comment-button:disabled,
+.disabled-button {
+    background-color: #ccc;
+    color: #666;
+    cursor: default;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

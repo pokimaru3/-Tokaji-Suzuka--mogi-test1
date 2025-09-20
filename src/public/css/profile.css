@@ -1,0 +1,104 @@
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-top: 90px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #D9D9D9;
+    margin-left: 280px;
+}
+
+.profile-name {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.edit-button {
+    width: 310px;
+    height: 59px;
+    background-color: #ffffff;
+    color: #FF5555;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 26px;
+    border: 2px solid #FF5555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+.product-list {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    left: 129px;
+    border-bottom: 2px solid #5F5F5F;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.tab {
+    text-decoration: none;
+    color: #5F5F5F;
+    padding: 0px 20px;
+    font-weight: bold;
+    margin-left: 129px;
+    font-size: 24px;
+}
+
+.tab+.tab {
+    margin-left: 40px;
+}
+
+.tab.active {
+    color: #FF0000;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 290px);
+    gap: 40px;
+    justify-content: center;
+    margin: 90px auto 0;
+    padding: 0;
+    max-width: 1400px;
+}
+
+.item-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-card {
+    position: relative;
+    width: 290px;
+    height: 320px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.item-card__image {
+    width: 290px;
+    height: 281.27px;
+    object-fit: cover;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.item-card__name {
+    font-size: 25px;
+    margin-top: 5px;
+}
