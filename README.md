@@ -23,7 +23,7 @@
 
 **Docker ビルド**
 
-1. `git clone github.com/pokimaru3/Tokaji-Suzuka-mogi-test1.git`
+1. `git@github.com:pokimaru3/-Tokaji-Suzuka--mogi-test1.git`
 2. DockerDesktop アプリを立ち上げる
 3. `docker-compose up -d --build`
 
