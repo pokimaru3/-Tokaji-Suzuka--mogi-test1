@@ -20,9 +20,10 @@
 - 購入済み商品の商品詳細ページでは購入するボタンの代わりに sold を表示し、コメントも不可にしています。
 
 ## 環境構築
+
 **Docker ビルド**
 
-1. `git clone git@github.com/pokimaru3/-Tokaji-Suzuka--mogi-test1.git`
+1. `git clone github.com/pokimaru3/Tokaji-Suzuka-mogi-test1.git`
 2. DockerDesktop アプリを立ち上げる
 3. `docker-compose up -d --build`
 
@@ -70,8 +71,6 @@ php artisan migrate
 php artisan db:seed
 ```
 
-
-
 ## 使用技術（実行環境）
 
 - PHP8.4.6
@@ -81,15 +80,13 @@ php artisan db:seed
 
 ## ER 図
 
-
-
 ## URL
 
 - 商品一覧画面：http://localhost/
 - ログイン画面：http://localhost/login
 - 会員登録画面：http://localhost/register
 - プロフィール設定画面：http://localhost/setting
-- 商品詳細画面：http://localhost/item/ (item_id)
+- 商品詳細画面：http://localhost/item/(item_id)
 - 商品購入画面：http://localhost/purchase/(item_id)
 - 配送先住所変更画面：http://localhost/purchase/address/(item_id)
 - マイページ：http://localhost/mypage
@@ -99,15 +96,12 @@ php artisan db:seed
 
 ## 一般ユーザーのログイン情報
 
-1.
-ユーザー名：テスト太郎
-メールアドレス：test@example.com
-パスワード：test12345
-
-2.
-ユーザー名：テスト花子
-メールアドレス：test2@example.com
-パスワード：test12345
+1.  ユーザー名：テスト太郎
+    メールアドレス：test@example.com
+    パスワード：test12345
+2.  ユーザー名：テスト花子
+    メールアドレス：test2@example.com
+    パスワード：test12345
 
 ## テストの実行方法
 
