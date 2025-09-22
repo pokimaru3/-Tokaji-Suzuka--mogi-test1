@@ -105,6 +105,42 @@ php artisan db:seed
 
 ## テストの実行方法
 
+1. $ cp .env .env.testing
+
+2. .env.testing ファイルを編集
+   APP_NAME=Laravel
+   APP_ENV=test
+   APP_KEY=
+   APP_DEBUG=true
+   APP_URL=http://localhost
+
+DB_CONNECTION=mysql_test
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=furima_app_test
+DB_USERNAME=root
+DB_PASSWORD=root
+
+3.　アプリケーションキーの作成
+
+```bash
+php artisan key:generate --env=testing
+```
+
+4.　キャッシュの削除
+
+```bash
+php artisan config:clear
+```
+
+5.　マイグレーションの実行
+
+```bash
+php artisan migrate --env=testing
+```
+
+6.　テストの実行
+
 ```bash
 php artisan test
 ```
