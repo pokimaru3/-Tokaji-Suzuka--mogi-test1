@@ -33,7 +33,7 @@
                     <input class="register-form__input" type="password" name="password" id="password">
                     <p class="register-form__error-message">
                         @error('password')
-                        {{ $message }}
+                            {{ $message }}
                         @enderror
                     </p>
                 </div>
@@ -42,7 +42,7 @@
                     <input class="register-form__input" type="password" name="password_confirmation" id="password_confirmation">
                     <p class="register-form__error-message">
                         @error('password_confirmation')
-                        {{ $message }}
+                            {{ $message }}
                         @enderror
                     </p>
                 </div>

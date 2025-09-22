@@ -23,10 +23,12 @@ class UserController extends Controller
     {
         $user = Auth::user();
         $user->name = $request->name;
+
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('profile_images', 'public');
             $user->image = $path;
         }
+
         $user->save();
 
         Address::create([
@@ -35,6 +37,7 @@ class UserController extends Controller
             'address'     => $request->address,
             'building'    => $request->building,
         ]);
+
         return redirect('/');
     }
 
@@ -48,8 +51,8 @@ class UserController extends Controller
     {
         /** @var \App\Models\User $user */
         $user = Auth::user();
-
         $user->name = $request->name;
+
         if ($request->hasFile('image')) {
             if ($user->image) {
                 Storage::disk('public')->delete($user->image);
@@ -57,6 +60,7 @@ class UserController extends Controller
             $path = $request->file('image')->store('profile_images', 'public');
             $user->image = $path;
         }
+
         $user->save();
 
         if ($user->address) {
@@ -73,16 +77,20 @@ class UserController extends Controller
                 'building'    => $request->building,
             ]);
         }
+
         return redirect('/');
     }
 
     public function profile()
     {
         $user = Auth::user();
+
         $sellItems = Item::where('user_id', $user->id)->get();
+
         $purchaseItems = Item::whereHas('orders', function ($query) use ($user) {
             $query->where('user_id', $user->id);
         })->get();
+
         return view('profile', compact('user', 'sellItems', 'purchaseItems'));
     }
 }

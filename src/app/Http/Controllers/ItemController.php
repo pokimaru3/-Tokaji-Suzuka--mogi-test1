@@ -10,7 +10,6 @@ use App\Models\Category;
 use App\Http\Requests\CommentRequest;
 use App\Http\Requests\ExhibitionRequest;
 
-
 class ItemController extends Controller
 {
     public function index(Request $request)
@@ -19,11 +18,11 @@ class ItemController extends Controller
 
         $favoriteItems = auth()->check()
             ? auth()->user()->favorites()
-            ->when($request->filled('keyword'), function ($query) use ($request) {
-                $query->where('name', 'like', '%' . $request->input('keyword') . '%');
-            })
-            ->with('orders')
-            ->get()
+                ->when($request->filled('keyword'), function ($query) use ($request) {
+                    $query->where('name', 'like', '%' . $request->input('keyword') . '%');
+                })
+                ->with('orders')
+                ->get()
             : collect();
 
         $items = Item::query()
@@ -42,6 +41,7 @@ class ItemController extends Controller
     {
         $item = Item::with(['categories', 'comments.user', 'orders'])->findOrFail($item_id);
         $sold = $item->is_sold || $item->orders->isNotEmpty();
+
         return view('detail', compact('item', 'sold'));
     }
 
@@ -49,6 +49,7 @@ class ItemController extends Controller
     {
         $item = Item::findOrFail($item_id);
         $user = auth()->user();
+
         if ($user->favorites()->where('item_id', $item_id)->exists()) {
             $user->favorites()->detach($item_id);
             $status = 'removed';
@@ -89,6 +90,7 @@ class ItemController extends Controller
     public function store(ExhibitionRequest $request)
     {
         $imagePath = $request->file('image')->store('images', 'public');
+
         $item = Item::create([
             'user_id'     => auth()->id(),
             'name'        => $request->name,
@@ -98,9 +100,11 @@ class ItemController extends Controller
             'image'       => $imagePath,
             'condition'   => $request->condition,
         ]);
+
         if ($request->has('categories')) {
             $item->categories()->sync($request->categories);
         }
+
         return redirect("/");
     }
 }

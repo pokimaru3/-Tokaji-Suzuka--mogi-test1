@@ -61,13 +61,13 @@
         </form>
     </div>
 
-        <script>
-            const paymentSelect = document.getElementById('payment_method');
-            const paymentDisplay = document.getElementById('payment_display');
+    <script>
+        const paymentSelect = document.getElementById('payment_method');
+        const paymentDisplay = document.getElementById('payment_display');
 
-            paymentSelect.addEventListener('change', function() {
-                const selectedText = paymentSelect.options[paymentSelect.selectedIndex].text;
-                paymentDisplay.textContent = selectedText;
-            });
-        </script>
+        paymentSelect.addEventListener('change', function() {
+            const selectedText = paymentSelect.options[paymentSelect.selectedIndex].text;
+            paymentDisplay.textContent = selectedText;
+        });
+    </script>
 @endsection

@@ -25,7 +25,7 @@
                     <form action="/logout" method="POST" class="nav-button-form">
                         @csrf
                         <button type="submit" class="logout-button">
-                        ログアウト
+                            ログアウト
                         </button>
                     </form>
                 @endauth
@@ -47,5 +47,4 @@
         </div>
     </div>
 </body>
-
 </html>

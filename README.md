@@ -126,25 +126,25 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
-3.　アプリケーションキーの作成
+3. アプリケーションキーの作成
 
 ```bash
 php artisan key:generate --env=testing
 ```
 
-4.　キャッシュの削除
+4. キャッシュの削除
 
 ```bash
 php artisan config:clear
 ```
 
-5.　マイグレーションの実行
+5. マイグレーションの実行
 
 ```bash
 php artisan migrate --env=testing
 ```
 
-6.　テストの実行
+6. テストの実行
 
 ```bash
 php artisan test

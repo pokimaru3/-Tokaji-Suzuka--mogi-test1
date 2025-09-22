@@ -1,4 +1,4 @@
-.setting {
+.setting-form {
     position: relative;
     width: 90%;
     margin: 0 auto;
@@ -6,7 +6,7 @@
     background-color: #FFFFFF;
 }
 
-.setting__heading {
+.setting-form__heading {
     font-size: 36px;
     font-weight: bold;
     text-align: center;

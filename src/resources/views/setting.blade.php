@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="setting">
-        <h2 class="setting__heading">プロフィール設定</h2>
+    <div class="setting-form">
+        <h2 class="setting-form__heading">プロフィール設定</h2>
         <div class="setting-form__inner">
             <form class="setting-form__form" action="/setting" method="post" enctype="multipart/form-data">
                 @csrf
@@ -66,5 +66,4 @@
             }
         });
     </script>
-
 @endsection
