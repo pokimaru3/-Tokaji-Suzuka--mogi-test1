@@ -105,21 +105,26 @@ php artisan db:seed
 
 ## テストの実行方法
 
-1. $ cp .env .env.testing
+1. `cp .env .env.testing`
 
 2. .env.testing ファイルを編集
+
+```text
    APP_NAME=Laravel
    APP_ENV=test
    APP_KEY=
    APP_DEBUG=true
    APP_URL=http://localhost
+```
 
+```text
 DB_CONNECTION=mysql_test
 DB_HOST=mysql
 DB_PORT=3306
 DB_DATABASE=furima_app_test
 DB_USERNAME=root
 DB_PASSWORD=root
+```
 
 3.　アプリケーションキーの作成
 
