@@ -25,6 +25,7 @@
 
 1. `git clone git@github.com:pokimaru3/-Tokaji-Suzuka--mogi-test1.git`
 2. DockerDesktop アプリを立ち上げる
+   > cd が効かない場合は、cd ./-Tokaji-Suzuka--mogi-test1/を入力
 3. `docker-compose up -d --build`
 
 > _Mac の M1・M2 チップの PC の場合、`no matching manifest for linux/arm64/v8 in the manifest list entries`のメッセージが表示されビルドができないことがあります。
@@ -104,47 +105,6 @@ php artisan db:seed
     パスワード：test12345
 
 ## テストの実行方法
-
-1. `cp .env .env.testing`
-
-2. .env.testing ファイルを編集
-
-```text
-   APP_NAME=Laravel
-   APP_ENV=test
-   APP_KEY=
-   APP_DEBUG=true
-   APP_URL=http://localhost
-```
-
-```text
-DB_CONNECTION=mysql_test
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=furima_app_test
-DB_USERNAME=root
-DB_PASSWORD=root
-```
-
-3. アプリケーションキーの作成
-
-```bash
-php artisan key:generate --env=testing
-```
-
-4. キャッシュの削除
-
-```bash
-php artisan config:clear
-```
-
-5. マイグレーションの実行
-
-```bash
-php artisan migrate --env=testing
-```
-
-6. テストの実行
 
 ```bash
 php artisan test
