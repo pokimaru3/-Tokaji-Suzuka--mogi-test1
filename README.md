@@ -81,6 +81,8 @@ php artisan db:seed
 
 ## ER 図
 
+![ER図](docs/er.png)
+
 ## URL
 
 - 商品一覧画面：http://localhost/
